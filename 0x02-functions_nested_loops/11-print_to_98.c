@@ -5,7 +5,7 @@
 void print_to_98(int n)
 {
 	int i;
-
+<F11>
 	if (n > 98)
 	{
 		for (i = n; i >= 98; i--)
