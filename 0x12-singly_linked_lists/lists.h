@@ -9,7 +9,7 @@ int _putchar(char c);
  * @next: points to the next node
  * solocode
  * Description: singly linked list node structure
- * for Holberton project
+ * 
  */
 typedef struct list_s
 {
