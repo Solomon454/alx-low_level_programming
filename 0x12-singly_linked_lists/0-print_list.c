@@ -1,31 +1,23 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <stddef.h>
 #include "lists.h"
 
 /**
- * print_list - check the code for Holberton School students.
- * @h: name of the list
+ * print_list - print data in a linked list
  * solocode
- * Return: the number of nodes.
+ * @h: pointer to a linked list
+ *
+ * Return: size_t, number of nodes
  */
 size_t print_list(const list_t *h)
 {
-	int count = 0;
+	size_t node_count = 0;
 
-	while (h)
+	for ( ; h != NULL; h = h->next)
 	{
 		if (h->str == NULL)
-		{
 			printf("[0] (nil)\n");
-		}
 		else
-		{
-		printf("[%d] %s\n", h->len, h->str);
-		}
-		count++;
-		h = h->next;
+			printf("[%i] %s\n", h->len, h->str);
+		node_count += 1;
 	}
-	return (count);
+	return (node_count);
 }
